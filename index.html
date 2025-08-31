@@ -203,28 +203,55 @@
 
 
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Contact</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <form class="shadow p-4 bg-white rounded">
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Nom" required>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" placeholder="Votre message..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-success w-100">Envoyer</button>
-          </form>
-        </div>
+<!-- CONTACT -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Contactez-moi</h2>
+    <p class="text-center mb-5">Intéressé par une collaboration ou un projet ? Envoyez-moi un message !</p>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form action="https://formspree.io/f/meolkapv" method="POST" class="p-4 shadow rounded bg-white">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="_replyto" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-4">Envoyer</button>
+          </div>
+        </form>
       </div>
     </div>
-  </section>
+
+    <!-- Contact infos -->
+    <div class="row text-center mt-5">
+      <div class="col-md-4">
+        <i class="bi bi-envelope-fill display-6 text-primary"></i>
+        <p class="mt-2">mohamedharti1989@gmail.com</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-phone-fill display-6 text-success"></i>
+        <p class="mt-2">+212 6 XX XX XX XX</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-geo-alt-fill display-6 text-danger"></i>
+        <p class="mt-2">Casablanca, Maroc</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- FOOTER -->
   <footer class="bg-dark text-white text-center py-3">
