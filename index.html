@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MohamedDev | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Mohamed<span class="text-success">Dev</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="vh-100 d-flex align-items-center text-center bg-dark text-white">
+    <div class="container">
+      <img src="images/moi.jpg" alt="Mohamed" class="rounded-circle shadow mb-3" width="150">
+      <h1 class="fw-bold">Mohamed EL HARTI</h1>
+      <h2><span class="typing text-success fw-semibold"></span></h2>
+      <div class="mt-4">
+        <a href="cv.pdf" target="_blank"  class="btn btn-success me-2" download>Télécharger CV</a>
+        <a href="#projects" class="btn btn-outline-light">Mes Projets</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">À propos de moi</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="images/About.jpg" alt="About" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-8">
+          <p class="lead">
+            Développeur Back-End & Formateur passionné par le partage de connaissances. 
+            J’accompagne les étudiants et les entreprises dans leurs projets informatiques en apportant des solutions modernes et efficaces.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCOURS -->
+  <section id="parcours" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Mon Parcours</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h4 class="text-success">Éducatif</h4>
+          <ul class="list-group shadow" id="edu"></ul>
+        </div>
+        <div class="col-md-6">
+          <h4 class="text-success">Professionnel</h4>
+          <ul class="list-group shadow" id="pro"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Mes Projets</h2>
+    <div class="row g-4">
+      
+      <!-- Projet 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow hover-scale fade-in">
+          <img src="images/projet1.jpg" class="card-img-top" alt="Application de pointage en JAVA">
+          <div class="card-body">
+            <p class="card-text">Application de pointage en JAVA.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projet 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow hover-scale fade-in">
+          <img src="images/projet2.jpg" class="card-img-top" alt="Site e-commerce pour ALF AL MAGHRIB">
+          <div class="card-body">
+            <p class="card-text">Site e-commerce pour ALF AL MAGHRIB.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projet 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow hover-scale fade-in">
+          <img src="images/projet3.png" class="card-img-top" alt="Site web AL AMAL Immobilier">
+          <div class="card-body">
+            <p class="card-text">
+              Site web + admin pour AL AMAL Immobilier. 
+              <a href="http://www.alamal-immobilier.ma" target="_blank">Visiter</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projet 4 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow hover-scale fade-in">
+          <img src="images/projet4.png" class="card-img-top" alt="Site Coopérative BAB Draa pour le Tourisme Solidaire">
+          <div class="card-body">
+            <p class="card-text">
+              Site Coopérative BAB Draa pour le Tourisme Solidaire
+              <a href="http://bab-daraa.intelligenceindustry.ma/" target="_blank">Visiter</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+<section id="services" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">services</h2>
+    <p class="text-center my-4 fs-5">Ce que je peux faire pour vous</p>
+    <div class="row g-4">
+      
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow hover-scale fade-in text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-laptop display-4 text-primary mb-3"></i>
+            <h5 class="card-title">Création de sites web</h5>
+            <p class="card-text">Conception de sites modernes, responsives et optimisés pour vos besoins professionnels.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow hover-scale fade-in text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-pc-display display-4 text-success mb-3"></i>
+            <h5 class="card-title">Applications Desktop</h5>
+            <p class="card-text">Développement d’applications bureautiques performantes et adaptées à vos processus métiers.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow hover-scale fade-in text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-phone display-4 text-warning mb-3"></i>
+            <h5 class="card-title">Applications Mobiles</h5>
+            <p class="card-text">Création d’applications mobiles Android/iOS pour mieux connecter vos clients à vos services.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow hover-scale fade-in text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-database display-4 text-danger mb-3"></i>
+            <h5 class="card-title">Gestion des bases de données</h5>
+            <p class="card-text">Conception, optimisation et maintenance de vos bases de données sécurisées et évolutives.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow hover-scale fade-in text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-people display-4 text-info mb-3"></i>
+            <h5 class="card-title">Formations</h5>
+            <p class="card-text">Cours et formations personnalisées en développement web, desktop, mobile et bases de données.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form class="shadow p-4 bg-white rounded">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Nom" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Votre message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 MohamedDev | Tous droits réservés</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
