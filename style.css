@@ -32,3 +32,254 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+
+
+
+#stats h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+#stats p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+
+
+/* Barre flottante */
+.social-icons {
+  position: fixed;
+  top: 30%;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.social-icons .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  transition: 0.3s;
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* Couleurs */
+.social-icons .facebook { background: #1877f2; }
+.social-icons .whatsapp { background: #25d366; }
+.social-icons .phone    { background: #000; }
+.social-icons .github   { background: #333; }
+.social-icons .linkedin { background: #0077b5; }
+.social-icons .top      { background: #1c1f2b; }
+
+
+/* Animation hover */
+.social-icons .icon:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Bouton ↑ caché par défaut */
+#btnTop {
+  display: none;
+}
+
+
+
+
+
+.title-wrapper {
+  text-align: center;            /* centre le h2 */
+}
+
+.styled-title {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: green;
+  margin: 40px 0;
+  padding: 0 200px;              /* espace à gauche/droite pour les traits */
+}
+
+/* --- 3 traits côté gauche --- */
+.styled-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 16px);      /* espace entre texte et traits */
+  transform: translateY(-50%);
+  width: 150px;                  /* largeur max du groupe */
+  height: 40px;                  /* hauteur du “stack” (espacement vertical) */
+
+  background-image:
+    linear-gradient(to right, #2193b0, #6dd5ed),
+    linear-gradient(to right, #2193b0, #6dd5ed),
+    linear-gradient(to right, #2193b0, #6dd5ed);
+  background-repeat: no-repeat;
+  background-size: 150px 3px, 100px 3px, 50px 3px;   /* 1er, 2e, 3e trait */
+  background-position: right top, right center, right bottom;
+}
+
+/* --- 3 traits côté droit --- */
+.styled-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 16px);
+  transform: translateY(-50%);
+  width: 150px;
+  height: 40px;
+
+  background-image:
+    linear-gradient(to right, #2193b0, #6dd5ed),
+    linear-gradient(to right, #2193b0, #6dd5ed),
+    linear-gradient(to right, #2193b0, #6dd5ed);
+  background-repeat: no-repeat;
+  background-size: 150px 3px, 100px 3px, 50px 3px;
+  background-position: left top, left center, left bottom;
+}
+
+
+.custom-nav {
+  background: linear-gradient(to right, #2193b0, #6dd5ed) !important;
+  border-bottom: 3px solid var(--bs-success); /* Couleur Bootstrap text-success */
+}
+
+
+.footer-custom {
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+  border-top: 4px solid var(--bs-success); /* utilise la couleur Bootstrap text-success */
+}
+
+
+
+.skill-bar {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.skill-bar::before {
+  content: "";
+}
+
+.skill-bar span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: #eee;
+  border-radius: 3px;
+}
+
+.skill-bar span.filled {
+  background: #17a2b8; /* Couleur principale (cyan bootstrap) */
+}
+
+
+.progress {
+  height: 25px;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0; /* départ à 0 */
+  line-height: 25px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+  border-radius: 20px;
+  transition: width 2s ease;
+}
+
+
+
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #2193b0;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin: 30px 0;
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-date {
+  position: absolute;
+  top: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #444;
+  transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+  right: -70px;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+  left: -70px;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 15px;
+  margin-left: 5px;
+  border-radius: 8px;
+  position: relative;
+  width: 80%;
+}
+
+.timeline-content h5 {
+  color: #2193b0;
+  margin-bottom: 5px;
+}
+
+/* État caché avant apparition */
+.timeline-item.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* État visible */
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}

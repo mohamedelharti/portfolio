@@ -8,27 +8,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top" >
 
-  <!-- HEADER -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Mohamed<span class="text-success">Dev</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+<!-- HEADER -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow custom-nav">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Mohamed<span class="text-success">Dev</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- HOME -->
   <section id="home" class="vh-100 d-flex align-items-center text-center bg-dark text-white">
@@ -43,10 +44,27 @@
     </div>
   </section>
 
+<!-- Icônes sociales flottantes -->
+<div class="social-icons">
+  <a href="https://www.facebook.com/mohamed.elharti.589/" target="_blank" class="icon facebook"><i class="bi bi-facebook"></i></a>
+  <a href="https://wa.me/212697889032" target="_blank" class="icon whatsapp"><i class="bi bi-whatsapp"></i></a>
+  <a href="tel:+212697889032" class="icon phone"><i class="bi bi-telephone-fill"></i></a>
+  <a href="https://github.com/mohamedelharti" target="_blank" class="icon github"><i class="bi bi-github"></i></a>
+  <a href="https://www.linkedin.com/in/mohamed-el-harti/" target="_blank" class="icon linkedin"><i class="bi bi-linkedin"></i></a>
+  <a href="#top" id="btnTop" class="icon top"><i class="bi bi-arrow-up"></i></a>
+</div>
+
+
+
+
   <!-- ABOUT -->
   <section id="about" class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-4">À propos de moi</h2>
+      <div class="title-wrapper">
+        <h2 class="styled-title">À propos de moi</h2>
+      </div>
+
+
       <div class="row align-items-center">
         <div class="col-md-4 text-center">
           <img src="images/About.jpg" alt="About" class="img-fluid rounded shadow">
@@ -64,7 +82,9 @@
   <!-- PARCOURS -->
   <section id="parcours" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Mon Parcours</h2>
+            <div class="title-wrapper">
+              <h2 class="styled-title">Mon Parcours</h2>
+            </div>
       <div class="row">
         <div class="col-md-6">
           <h4 class="text-success">Éducatif</h4>
@@ -78,10 +98,153 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
-<section id="projects" class="py-5 bg-light">
+
+  <!-- COMPETENCES -->
+<section id="skills" class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-4">Mes Projets</h2>
+
+    <div class="title-wrapper">
+      <h2 class="styled-title">MES COMPETENCES</h2>
+    </div>
+    <div class="row">
+
+      <!-- Colonne gauche -->
+      <div class="col-md-6">
+        <p><em>HTML / CSS / JS</em></p>
+        <div class="progress">
+          <div class="progress-bar" data-width="90">90%</div>
+        </div>
+
+        <p><em>Symfony / LARAVEL</em></p>
+        <div class="progress">
+          <div class="progress-bar" data-width="80">80%</div>
+        </div>
+
+        <p><em>PHP / MySQL</em></p>
+        <div class="progress">
+          <div class="progress-bar" data-width="85">85%</div>
+        </div>
+
+        <p><em>JAVA / JAVA JEE</em></p>
+        <div class="progress">
+          <div class="progress-bar" data-width="70">70%</div>
+        </div>
+      </div>
+
+      <!-- Colonne droite -->
+      <div class="col-md-6">
+        <p><em>PYTHON / Django</em></p>
+        <div class="progress">
+          <div class="progress-bar" data-width="60">60%</div>
+        </div>
+
+        <p><em>UML</em></p>
+        <div class="progress">
+          <div class="progress-bar" data-width="75">75%</div>
+        </div>
+
+        <p><em>.NET</em></p>
+        <div class="progress">
+          <div class="progress-bar" data-width="65">65%</div>
+        </div>
+
+        <p><em>C++</em></p>
+        <div class="progress">
+          <div class="progress-bar" data-width="70">70%</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Mes Certifications</h2>
+    
+    <div class="timeline">
+      
+      <!-- Certification 1 -->
+      <div class="timeline-item hidden">
+        <div class="timeline-date">2021</div>
+        <div class="timeline-content shadow">
+          <h5>Certificat de HTML5</h5>
+          <p><strong>ID :</strong> CSC-20210801-4827</p>
+        </div>
+      </div>
+      
+      <!-- Certification 2 -->
+      <div class="timeline-item hidden">
+        <div class="timeline-date">2021</div>
+        <div class="timeline-content shadow">
+          <h5>Certificat de CSS3</h5>
+          <p><strong>ID :</strong> CSC-20210822-0020</p>
+        </div>
+      </div>
+      
+      <!-- Certification 3 -->
+      <div class="timeline-item hidden">
+        <div class="timeline-date">2020</div>
+        <div class="timeline-content shadow">
+          <h5>Développez des sites web avec Java EE</h5>
+          <p><strong>ID :</strong> 8379980493</p>
+        </div>
+      </div>
+      
+      <!-- Certification 4 -->
+      <div class="timeline-item hidden">
+        <div class="timeline-date">2019</div>
+        <div class="timeline-content shadow">
+          <h5>Java : Certificat de fin de formation</h5>
+          <p><strong>ID :</strong> UC-06227bb8-f6ad-4871-b57d-94a6d8c6f6ca</p>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+
+  <!-- STATS -->
+<section id="stats" class="py-5 bg-light">
+  <div class="container">
+      <div class="title-wrapper">
+          <h2 class="styled-title">Mes Réalisations</h2>
+      </div>
+    <div class="row text-center">
+      
+      <div class="col-md-3">
+        <h3><span class="counter text-success" data-target="100">0</span></h3>
+        <p>Projets Réalisés</p>
+      </div>
+      
+      <div class="col-md-3">
+        <h3><span class="counter text-success" data-target="100">0</span></h3>
+        <p>Clients Satisfaits</p>
+      </div>
+      
+      <div class="col-md-3">
+        <h3><span class="counter text-success" data-target="10000">0</span></h3>
+        <p>Lignes de Code</p>
+      </div>
+      
+      <div class="col-md-3">
+        <h3><span class="counter text-success" data-target="500">0</span></h3>
+        <p>Stagiaires Accompagnés</p>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+
+  <!-- PROJECTS -->
+<section id="projects" class="py-5">
+  <div class="container">
+          <div class="title-wrapper">
+            <h2 class="styled-title">Mes Projets</h2>
+        </div>
     <div class="row g-4">
       
       <!-- Projet 1 -->
@@ -136,9 +299,11 @@
 
 
 <!-- SERVICES -->
-<section id="services" class="py-5">
+<section id="services" class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-4">services</h2>
+        <div class="title-wrapper">
+          <h2 class="styled-title">Mes services</h2>
+        </div>
     <p class="text-center my-4 fs-5">Ce que je peux faire pour vous</p>
     <div class="row g-4">
       
@@ -203,33 +368,64 @@
 
 
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Contact</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <form class="shadow p-4 bg-white rounded">
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Nom" required>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" placeholder="Votre message..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-success w-100">Envoyer</button>
-          </form>
+<!-- CONTACT -->
+<section id="contact" class="py-5">
+  <div class="container">
+        <div class="title-wrapper">
+          <h2 class="styled-title">Contactez-moi</h2>
         </div>
+    <p class="text-center mb-5">Intéressé par une collaboration ou un projet ? Envoyez-moi un message !</p>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form id="contactForm" action="https://formspree.io/f/meolkapv" method="POST" class="p-4 shadow rounded bg-white">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="_replyto" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-4">Envoyer</button>
+          </div>
+
+          <p id="formMsg" class="text-center mt-3"></p>
+        </form>
       </div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2025 MohamedDev | Tous droits réservés</p>
-  </footer>
+    <!-- Contact infos -->
+    <div class="row text-center mt-5">
+      <div class="col-md-4">
+        <i class="bi bi-envelope-fill display-6 text-primary"></i>
+        <p class="mt-2">mohamedharti1989@gmail.com</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-phone-fill display-6 text-success"></i>
+        <p class="mt-2">+212 6 97 88 90 32</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-geo-alt-fill display-6 text-danger"></i>
+        <p class="mt-2">Casablanca, Maroc</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer-custom text-white text-center py-3">
+  <p class="mb-0">&copy; 2025 Mohamed<span class="text-success">Dev</span> | Tous droits réservés</p>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>

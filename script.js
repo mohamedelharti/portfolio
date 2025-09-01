@@ -21,9 +21,9 @@ typeEffect();
 
 // Parcours éducatif
 const eduData = [
-  "2010 : Baccalauréat - Lycée IBN BATOUTA",
+  "2022 : Licence Miage - SupTechnologie",
   "2012 : TS Développement Informatique - ISTA Ben M'sik",
-  "2022 : Licence Miage - SupTechnologie"
+  "2010 : Baccalauréat - Lycée IBN BATOUTA",
 ];
 const eduList = document.getElementById("edu");
 eduData.forEach(item => {
@@ -66,4 +66,133 @@ const observer = new IntersectionObserver((entries, observer) => {
 faders.forEach(fader => {
   fader.classList.add("fade-in");
   observer.observe(fader);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// --- Compteur animé ---
+const counters = document.querySelectorAll('.counter');
+const speed = 200; // Plus petit = plus rapide
+
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const increment = Math.ceil(target / speed);
+
+          if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = "+" + target;
+          }
+        };
+        updateCount();
+      });
+      counterObserver.disconnect(); // Lance une seule fois
+    }
+  });
+}, { threshold: 0.5 });
+
+counterObserver.observe(document.querySelector('#stats'));
+
+
+
+
+
+
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault(); 
+
+  const form = e.target;
+  const msg = document.getElementById("formMsg");
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      msg.textContent = " Votre message a été envoyé avec succès !";
+      msg.className = "text-success text-center mt-3";
+      form.reset(); 
+    } else {
+      msg.textContent = " Une erreur est survenue. Veuillez réessayer.";
+      msg.className = "text-danger text-center mt-3";
+    }
+  } catch (error) {
+    msg.textContent = " Problème de connexion. Réessayez plus tard.";
+    msg.className = "text-warning text-center mt-3";
+  }
+});
+
+
+
+
+
+// Sélection du bouton ↑
+const btnTop = document.getElementById("btnTop");
+const aboutSection = document.getElementById("about");
+
+// Surveille le scroll
+window.addEventListener("scroll", () => {
+  const aboutTop = aboutSection.offsetTop;
+
+  if (window.scrollY >= aboutTop - 100) {
+    btnTop.style.display = "flex"; // Affiche le bouton
+  } else {
+    btnTop.style.display = "none"; // Cache le bouton
+  }
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBars = document.querySelectorAll(".progress-bar");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bar = entry.target;
+        const targetWidth = bar.getAttribute("data-width");
+        bar.style.width = targetWidth + "%";
+        observer.unobserve(bar); // Exécuté une seule fois
+      }
+    });
+  }, { threshold: 0.5 });
+
+  progressBars.forEach(bar => observer.observe(bar));
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".timeline-item");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        entry.target.classList.remove("hidden");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  items.forEach(item => {
+    observer.observe(item);
+  });
 });
